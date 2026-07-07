@@ -1,0 +1,85 @@
+{
+  "ANALOGIES_BY_LEVEL": {
+    "qubit": {
+      "explorer": "a magic coin that is both heads AND tails while spinning — it only picks one when you catch it",
+      "adventurer": "a quantum system that exists in a superposition of states with probability amplitudes α and β",
+      "scholar": "a two-level quantum system described by |ψ⟩ = α|0⟩ + β|1⟩ where |α|² + |β|² = 1",
+      "researcher": "a point on the Bloch sphere parameterised as |ψ⟩ = cos(θ/2)|0⟩ + e^(iφ)sin(θ/2)|1⟩"
+    },
+    "superposition": {
+      "explorer": "a cat in a box that is BOTH awake and asleep until you peek inside",
+      "adventurer": "a wave function that exists in multiple states simultaneously before measurement",
+      "scholar": "a linear combination of basis states with complex amplitudes that interfere",
+      "researcher": "an element of a Hilbert space that evolves unitarily under the Schrödinger equation"
+    },
+    "entanglement": {
+      "explorer": "two magical connected stars that always mirror each other — even far apart",
+      "adventurer": "correlated quantum particles that cannot be described by independent state vectors",
+      "scholar": "a non-separable joint quantum state where measurement on one instantly determines the other",
+      "researcher": "a state with non-zero quantum discord exhibiting Bell inequality violations"
+    },
+    "interference": {
+      "explorer": "like two ripples in a pond — they can add together or cancel each other out",
+      "adventurer": "constructive and destructive wave interference that amplifies or cancels probability amplitudes",
+      "scholar": "amplitude interference that underlies algorithmic advantage in quantum computing",
+      "researcher": "phase-coherent superposition enabling quantum speedup via amplitude amplification"
+    }
+  },
+  "PHYSICS_GROUND_TRUTH": {
+    "wave_particle": {
+      "approved": [
+        "Electrons form interference patterns when unobserved (wave behaviour)",
+        "Observation collapses the wave function — electron then behaves as a particle",
+        "The interference pattern is a probability distribution, not the electron physically splitting",
+        "Any physical measurement interaction causes wave function collapse"
+      ],
+      "blocked": [
+        "the electron splits in two",
+        "the camera hits the electron",
+        "the observer must be conscious"
+      ]
+    },
+    "superposition": {
+      "approved": [
+        "Superposition is a genuine physical state — not uncertainty about a hidden value",
+        "Amplitudes can be negative — probability is the squared magnitude",
+        "Superposition enables quantum interference, not parallel computation"
+      ],
+      "blocked": [
+        "tries all answers simultaneously",
+        "faster at everything",
+        "like many computers running at once"
+      ]
+    },
+    "entanglement": {
+      "approved": [
+        "Entangled particles share a quantum state — measurement on one instantly determines the other",
+        "No information is transmitted faster than light via entanglement",
+        "Entanglement is a correlation between measurement outcomes"
+      ],
+      "blocked": [
+        "faster than light communication",
+        "allows instant messaging",
+        "particles send signals to each other"
+      ]
+    }
+  },
+  "VOCABULARY": {
+    "explorer": {
+      "allowed": ["coin", "box", "star", "cat", "spin", "magic", "both", "either", "glow", "connect"],
+      "forbidden": ["amplitude", "eigenvector", "Hilbert", "tensor", "operator", "matrix", "phase"]
+    },
+    "adventurer": {
+      "allowed": ["probability", "wave", "interference", "collapse", "superposition", "entanglement"],
+      "forbidden": ["eigenvector", "Hilbert space", "tensor product", "Lindblad", "density matrix"]
+    },
+    "scholar": {
+      "allowed": ["amplitude", "operator", "basis", "eigenvector", "Dirac notation", "Born rule"],
+      "forbidden": ["Lindblad", "partial trace", "CPTP map"]
+    },
+    "researcher": {
+      "allowed": ["all mathematical formalism — no restrictions"],
+      "forbidden": []
+    }
+  }
+}

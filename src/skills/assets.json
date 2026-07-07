@@ -1,0 +1,175 @@
+{
+  "curriculum": {
+    "explorer": [
+      {
+        "id": "magic_coin",
+        "title": "The Magic Quantum Coin",
+        "prerequisiteIds": [],
+        "simulationType": "coin_flip",
+        "openingPrompt": "Ask the learner: 'Have you ever seen a coin spinning in the air? What do you think happens to it while it's spinning?' Let them answer, then introduce the quantum coin that is BOTH heads and tails at once.",
+        "completionCriteria": "Learner explains in own words that the quantum coin is both heads and tails while spinning and only picks one when caught/measured.",
+        "xpReward": 25
+      },
+      {
+        "id": "mystery_box",
+        "title": "The Mystery Box",
+        "prerequisiteIds": ["magic_coin"],
+        "simulationType": "box_peek",
+        "openingPrompt": "Connect to the magic coin: a quantum cat in a sealed box is BOTH awake AND asleep until you open it. Ask the learner to predict what they will find before peeking.",
+        "completionCriteria": "Learner explains the cat is in both states simultaneously and peering inside causes it to 'decide'.",
+        "xpReward": 25
+      },
+      {
+        "id": "connected_stars",
+        "title": "The Connected Stars",
+        "prerequisiteIds": ["magic_coin", "mystery_box"],
+        "simulationType": "entanglement_stars",
+        "openingPrompt": "Introduce two magical best-friend stars: whatever one does, the other copies instantly — even across the universe. Have the learner move one star and observe the other.",
+        "completionCriteria": "Learner explains the stars are always connected and mirror each other instantly regardless of distance.",
+        "xpReward": 30
+      }
+    ],
+    "adventurer": [
+      {
+        "id": "wave_interference",
+        "title": "Wave Interference",
+        "prerequisiteIds": [],
+        "simulationType": "wave_slider",
+        "openingPrompt": "Use water ripple analogy. Guide learner through the interactive wave slider to find both constructive and destructive interference positions.",
+        "completionCriteria": "Learner names and describes both constructive interference (waves add) and destructive interference (waves cancel) and connects this to quantum computing's ability to cancel wrong answers.",
+        "xpReward": 40
+      },
+      {
+        "id": "double_slit",
+        "title": "The Double-Slit Experiment",
+        "prerequisiteIds": ["wave_interference"],
+        "simulationType": "double_slit",
+        "openingPrompt": "Ask: 'What pattern do you predict appears when electrons pass through two slits?' Run the unobserved experiment, then add the detector and ask what changes.",
+        "completionCriteria": "Learner explains why the interference pattern appears unobserved and disappears when observed, using basic wave-particle duality language.",
+        "xpReward": 50
+      },
+      {
+        "id": "quantum_measurement",
+        "title": "Quantum Measurement",
+        "prerequisiteIds": ["double_slit"],
+        "simulationType": "measurement",
+        "openingPrompt": "Connect measurement to the double-slit result: 'What does the disappearing pattern tell us about what measurement does to a quantum system?'",
+        "completionCriteria": "Learner explains that measurement causes a definite outcome from a superposition of probabilities, using their own analogy.",
+        "xpReward": 50
+      }
+    ],
+    "scholar": [
+      {
+        "id": "qubit_math",
+        "title": "The Mathematics of Qubits",
+        "prerequisiteIds": [],
+        "simulationType": "bloch_sphere",
+        "openingPrompt": "Ask: 'What do you already know about how classical bits work?' Then introduce the qubit as |ψ⟩ = α|0⟩ + β|1⟩ and ask the learner to place three states on the Bloch sphere.",
+        "completionCriteria": "Learner correctly writes qubit state in Dirac notation, places |0⟩ |1⟩ |+⟩ on the Bloch sphere, and computes P(|1⟩) = |β|² for a given state.",
+        "xpReward": 75
+      },
+      {
+        "id": "quantum_gates",
+        "title": "Quantum Gates",
+        "prerequisiteIds": ["qubit_math"],
+        "simulationType": "circuit_builder",
+        "openingPrompt": "Ask: 'A classical NOT gate flips a bit. What do you predict a quantum NOT (X) gate does?' Then introduce H gate as the superposition creator.",
+        "completionCriteria": "Learner correctly describes H, X, CNOT gate actions, builds a Bell state circuit, and explains why CNOT creates entanglement.",
+        "xpReward": 100
+      },
+      {
+        "id": "quantum_algorithms_intro",
+        "title": "Introduction to Quantum Algorithms",
+        "prerequisiteIds": ["quantum_gates"],
+        "simulationType": "algorithm_viz",
+        "openingPrompt": "Ask: 'If a classical computer needs N steps to search an unsorted list, what speedup would you expect from a quantum computer?' Then introduce Grover's O(√N).",
+        "completionCriteria": "Learner explains why quantum algorithms offer speedups using interference as the mechanism, not parallel computation.",
+        "xpReward": 100
+      }
+    ],
+    "researcher": [
+      {
+        "id": "error_correction",
+        "title": "Quantum Error Correction",
+        "prerequisiteIds": [],
+        "simulationType": "stabilizer",
+        "openingPrompt": "Ask: 'What are the fundamental differences between quantum and classical error correction that make quantum error correction uniquely challenging?'",
+        "completionCriteria": "Learner discusses no-cloning theorem, measurement-induced collapse, and the stabilizer formalism at graduate level.",
+        "xpReward": 100
+      },
+      {
+        "id": "nisq_algorithms",
+        "title": "NISQ-Era Algorithms",
+        "prerequisiteIds": ["error_correction"],
+        "simulationType": "vqe_viz",
+        "openingPrompt": "Ask: 'VQE and QAOA are described as near-term quantum algorithms. What does this mean in terms of circuit depth and coherence requirements?'",
+        "completionCriteria": "Learner articulates the variational principle underlying VQE, the parameterised circuit structure, and realistic limitations on NISQ hardware.",
+        "xpReward": 150
+      }
+    ]
+  },
+  "badges": [
+    { "id": "coin_master", "label": "Quantum Coin Master", "icon": "🪙", "topicId": "magic_coin", "level": "explorer" },
+    { "id": "mystery_solver", "label": "Mystery Box Solver", "icon": "📦", "topicId": "mystery_box", "level": "explorer" },
+    { "id": "star_connector", "label": "Star Connector", "icon": "⭐", "topicId": "connected_stars", "level": "explorer" },
+    { "id": "wave_master", "label": "Wave Master", "icon": "🌊", "topicId": "wave_interference", "level": "adventurer" },
+    { "id": "double_slit", "label": "Double-Slit Detective", "icon": "🔍", "topicId": "double_slit", "level": "adventurer" },
+    { "id": "qubit_navigator", "label": "Qubit Navigator", "icon": "🌐", "topicId": "qubit_math", "level": "scholar" },
+    { "id": "circuit_builder", "label": "Circuit Architect", "icon": "⚡", "topicId": "quantum_gates", "level": "scholar" },
+    { "id": "qec_expert", "label": "Error Correction Expert", "icon": "🔐", "topicId": "error_correction", "level": "researcher" }
+  ],
+  "simulations": {
+    "coin_flip": {
+      "type": "interactive",
+      "description": "Animated quantum coin — tap to collapse to heads or tails. Shows both states while spinning.",
+      "visuals": "spinning golden coin with overlaid H/T, collapses with particle burst on tap"
+    },
+    "wave_slider": {
+      "type": "interactive",
+      "description": "Two sine waves with a phase offset slider. Shows constructive and destructive interference.",
+      "visuals": "two blue waves and combined white result wave, slider controls phase offset 0–2π"
+    },
+    "double_slit": {
+      "type": "interactive",
+      "description": "Electron gun + two slits + detection screen. Toggle detector button shows pattern change.",
+      "visuals": "dark screen with dots building interference pattern, detector toggle removes the pattern"
+    },
+    "bloch_sphere": {
+      "type": "visual",
+      "description": "3D Bloch sphere showing qubit states. Named states: |0⟩ |1⟩ |+⟩ |−⟩ |i⟩ |−i⟩",
+      "visuals": "dark 3D sphere with glowing state vector, pole labels, animated rotation"
+    },
+    "circuit_builder": {
+      "type": "interactive",
+      "description": "Drag-and-drop quantum circuit builder with H, X, CNOT, Z gates. Shows state vector output.",
+      "visuals": "grid of qubit wires, draggable gate tiles, probability histogram on right"
+    },
+    "entanglement_stars": {
+      "type": "interactive",
+      "description": "Two glowing stars — move one and the other mirrors it instantly.",
+      "visuals": "two stars connected by quantum thread, dragging one animates the other identically"
+    }
+  },
+  "celebrations": {
+    "explorer": {
+      "xp": "You just earned {pts} quantum XP! ✨ You're incredible!",
+      "badge": "🎉 Oh wow! You earned the {name} badge!! You should be SO proud! 🌟",
+      "topic": "Amazing! You've mastered \"{title}\"! On to the next adventure! 🚀"
+    },
+    "adventurer": {
+      "xp": "+{pts} XP! Excellent work, Explorer! ⚡",
+      "badge": "Achievement unlocked! {name} badge added! 🏆",
+      "topic": "\"{title}\" complete! Level up! 🌊"
+    },
+    "scholar": {
+      "xp": "+{pts} XP for that reasoning.",
+      "badge": "{name} badge earned. Genuine understanding demonstrated.",
+      "topic": "\"{title}\" mastered. Prerequisite satisfied."
+    },
+    "researcher": {
+      "xp": "{pts} XP.",
+      "badge": "{name} awarded.",
+      "topic": "\"{title}\" complete."
+    }
+  }
+}
